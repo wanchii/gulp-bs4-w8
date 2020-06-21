@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ALOHA-搜尋結果</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" /> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700;800&family=Roboto&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header class="header container py-3 py-md-4">
+        <nav class="navbar navbar-expand-md px-0 font-roboto">
+            <button class="navbar-toggler border-0 p-0" type="button" data-toggle="collapse"
+                data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <!-- <span class="navbar-toggler-icon"></span> -->
+                <span class="material-icons">
+                    menu
+                </span>
+            </button>
+            <a class="navbar-brand order-md-1" href="index.html"><img src="assets/images/ic-logo-aloha.svg" alt=""></a>
+            <a class="nav-link  font-weight-normal pr-0 pl-4 order-md-3" href="#">Login</a>
+            <div class="collapse navbar-collapse justify-content-end order-md-2" id="navbarNavDropdown">
+                <ul class="navbar-nav py-3 py-md-0">
+                    <li class="nav-item pb-3 pb-md-0 dropdown">
+                        <a class="nav-link px-md-4 dropdown-toggle d-flex align-items-center" href="#"
+                            id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <span class="material-icons">
+                                language
+                            </span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">繁體中文</a>
+                            <a class="dropdown-item" href="#">English</a>
+                            <a class="dropdown-item" href="#">日本語</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-md-4" href="#">Sign up</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+
+    
+<!-- search bar 下拉選單細節待做 -->
+<section class="resultSearch  bg-primary-light  mb-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 ">
+                <div class="searchBar-content list-unstyled font-opensans d-flex flex-lg-row flex-md-column flex-column py-4">
+                    <!-- 目的地 待做下拉選單-->
+                    <div class="searchBar-item input-group mb-lg-0 mr-lg-3 mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text material-icons">
+                                location_on
+                            </span>
+
+                        </div>
+                        <input type="text" class="searchBar-input" placeholder="Destination">
+                    </div>
+                    <!-- <div class="searchBar-item mb-lg-0 mr-lg-3 w-30">
+                        <div class="dropdown">
+                            <button class="btn bg-white d-md-flex align-items-md-center py-md-2 w-100" type="button"
+                                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+
+                                <span class="material-icons mr-2">location_on</span>
+
+                                <div class="d-flex flex-column font-opensans text-md-left">
+                                    <span class="font-weight-bold h8 text-dark-medium">Destination</span>
+                                    <span class="h7 text-dark-light">Bangkok, Thailand</span>
+                                </div>
+
+                            </button>
+
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">
+                                    <span class="material-icons">star</span>
+                                    <span>BAn</span>
+                                    <span>th</span>/a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- 日期 待做選取日曆-->
+                    <div class="searchBar-item input-group mb-lg-0 mr-lg-3 mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text material-icons">
+                                date_range
+                            </span>
+                        </div>
+                        <input type="text" class="searchBar-input" placeholder="Check-in / Check-out">
+                    </div>
+                    <!-- 人數 待做下拉選單-->
+                    <div class="searchBar-item input-group mb-lg-0 mr-lg-3 mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text material-icons">
+                                person
+                            </span>
+
+                        </div>
+                        <input type="text" class="searchBar-input" placeholder="Guests">
+                    </div>
+                    <!-- 人數下拉選單QQ -->
+                    <!-- <div class="searchBar-item mb-lg-0 mr-lg-3">
+                        <div class="dropdown">
+                            <button class="btn bg-white d-md-flex align-items-md-center py-md-2 w-100" type="button"
+                                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+
+                                <span class="material-icons mr-2">person</span>
+
+                                <div class="d-flex flex-column font-opensans text-md-left">
+                                    <span class="font-weight-bold h8 text-dark-medium">Guests</span>
+                                    <span class="h7 text-dark-light">2 adults・1 room</span>
+                                </div>
+
+                            </button>
+
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">
+                                    <span class="material-icons">star</span>
+                                    <span>BAn</span>
+                                    <span>th</span>/a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <button type="button" class="searchBar-btn btn btn-primary font-weight-bold">SEARCH</button>
+            
+                </div>
+            </div>    
+        </div>
+    </div>
+    </div>
+</section>
+
+
+<section class="result">
+    <div class="container">
+        <div class="row">
+            <!-- 左上 標題-位置 -->
+            <div class="col-4">
+                <h2 class="font-weight-bold mb-4">Bangkok <sub class="text-primary">3,240</sub></h2>
+            </div>
+            <!--右上方排列方式 Arrangement -->
+            <div class="col-8">
+                <ul class="arrangement list-unstyled d-flex mb-4">
+                    <li class="font-weight-bold font-opensans mr-4 active">Recommended</li>
+                    <li class="font-weight-bold font-opensans mr-4">Lowest Price</li>
+                    <li class="font-weight-bold font-opensans mr-4">Best value</li>
+                    <li class="font-weight-bold font-opensans ">Distance to City Center</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <!-- 左側更多條件篩選區 filter -->
+            <div class="col-4">
+                <div class="filter px-4 bg-primary-light">
+                    <form action="#">
+                        <!-- 命名跟細節調整 -->
+                        <!-- 第一個小區間 -->
+                        <div class="filter-item font-opensans">
+                            <h5 class="font-weight-bold mb-3">Deals</h5>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                <label class="custom-control-label text-dark-light" for="customCheck1">Free
+                                    cancellation</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                <label class="custom-control-label text-dark-light" for="customCheck2">No
+                                    prepayment</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                <label class="custom-control-label text-dark-light" for="customCheck3">Special
+                                    offers</label>
+                            </div>
+                        </div>
+
+                        <!-- 第二個小區間 -->
+                        <div class="filter-item font-opensans">
+                            <h5 class="font-weight-bold mb-3">Popular filter</h5>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                <label class="custom-control-label text-dark-light" for="customCheck4">Breakfast
+                                    included</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck5">
+                                <label class="custom-control-label text-dark-light" for="customCheck5">Free
+                                    Wi-Fi</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck6">
+                                <label class="custom-control-label text-dark-light" for="customCheck6">Swimming
+                                    pool</label>
+                            </div>
+                        </div>
+
+                        <!-- 第三個小區間  調整價錢 有兩個移動點-還沒做 -->
+                        <div class="filter-item font-opensans">
+                            <h5 class="font-weight-bold mb-3">Budget</h5>
+                            <!-- <label for="customRange2">Example range</label> -->
+                            <input type="range" class="custom-range" min="0" max="5" id="customRange2">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="bg-white d-flex flex-column rounded p-2 w-50">
+                                    <span class="font-weight-bold h8 text-dark-medium">Min price</span>
+                                    <p class="text-dark-light h7 mb-0">TWD 800</p>
+                                </div>
+                                <i class="material-icons">remove</i>
+                                <div class="bg-white d-flex flex-column rounded p-2 w-50">
+                                    <span class="font-weight-bold h8 text-dark-medium">Max price</span>
+                                    <p class="text-dark-light h7 mb-0">TWD 4,000+</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 第四個小區間 星星評價-->
+                        <div class="filter-item font-opensans">
+                            <h5 class="font-weight-bold mb-3">rating</h5>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck7">
+                                <label class="custom-control-label" for="customCheck7">
+                                    <span class="material-icons">star</span>
+                                    <span class="material-icons">star</span>
+                                    <span class="material-icons">star</span>
+                                    <span class="material-icons">star</span>
+                                    <span class="material-icons">star</span>
+                                    <span class="text-dark-light">5.0</span>
+                                </label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck8">
+                                <label class="custom-control-label" for="customCheck8">
+                                    <span class="material-icons">star</span>
+                                    <span class="material-icons">star</span>
+                                    <span class="material-icons">star</span>
+                                    <span class="material-icons">star</span>
+                                    <span class="text-dark-light">4.0</span>
+                                </label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck9">
+                                <label class="custom-control-label" for="customCheck9">
+                                    <span class="material-icons">star</span>
+                                    <span class="material-icons">star</span>
+                                    <span class="material-icons">star</span>
+                                    <span class="text-dark-light">3.0</span>
+                                </label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck10">
+                                <label class="custom-control-label" for="customCheck10">
+                                    <span class="material-icons">star</span>
+                                    <span class="material-icons">star</span>
+                                    <span class="text-dark-light">2.0</span>
+                                </label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck11">
+                                <label class="custom-control-label" for="customCheck11">
+                                    <span class="material-icons">star</span>
+                                    <span class="text-dark-light">1.0</span>
+                                </label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck12">
+                                <label class="custom-control-label text-dark-light" for="customCheck12">
+                                    Unrated
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- 第五個小區間 -->
+                        <div class="filter-item font-opensans">
+                            <h5 class="font-weight-bold mb-3">Stay type</h5>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck13">
+                                <label class="custom-control-label text-dark-light" for="customCheck13">Hotel</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck14">
+                                <label class="custom-control-label text-dark-light"
+                                    for="customCheck14">Apartment</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck15">
+                                <label class="custom-control-label text-dark-light" for="customCheck15">Unique</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck16">
+                                <label class="custom-control-label text-dark-light" for="customCheck16">Hostel</label>
+                            </div>
+                        </div>
+
+                    </form>
+
+
+                </div>
+            </div>
+            <!-- 右側搜尋結果資料 data -->
+            <div class="col-8">
+                <ul class="data list-unstyled">
+                    <!-- 第一筆資料 -->
+                    <li>
+                        <div class="data-item d-flex">
+                            <!-- 圖片 -->
+                            <img src="https://images.unsplash.com/photo-1560747571-e9b3c7e7868c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60"
+                                alt="" class="item-img">
+                            <!-- 相關資訊     -->
+                            <div class="item-content d-flex justify-content-between w-100 p-3">
+                                <div class="item-text font-opensans">
+                                    <p class="h8 text-primary mb-0">Rachada, Bangkok <span class="text-dark-light">・2
+                                            km from
+                                            center</span> </p>
+                                    <p class="item-title font-raleway font-weight-bold text-dark-medium h4 mb-3">
+                                        Rachada
+                                        Hotel</p>
+                                    <p class="font-weight-bold h7 text-dark-light mb-1">Deluxe Double Room</p>
+                                    <p class="h8 text-dark-light mb-3">2 guests・1 bed (Queen size)</p>
+                                    <!-- 條件?設備? -->
+                                    <div>
+                                        <span class="badge badge-primary-light text-dark-light">Free
+                                            cancellation</span>
+                                        <span class="badge badge-primary-light text-dark-light">No prepayment</span>
+                                    </div>
+                                </div>
+                                <div class="item-footer d-flex flex-column justify-content-between">
+                                    <p class="card-text mb-2 d-flex">
+                                        <span class="material-icons">star</span>
+                                        <span class="material-icons">star</span>
+                                        <span class="material-icons">star</span>
+                                        <span class="material-icons mr-1">star</span>
+                                        <span class="h7 text-secondary">4.0</span>
+                                        <span class="h7 text-secondary">(283)</span>
+                                    </p>
+
+                                    <p class=" mb-0 h7 text-secondary d-flex flex-column align-items-end">
+                                        <span class="h8 text-secondary">per night</span>
+                                        TWD 1,980</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="item-divider"></div>
+                    </li>
+                    <!-- no.2 -->
+                    <li>
+                        <div class="data-item d-flex">
+                            <!-- 圖片 -->
+                            <img src="https://images.unsplash.com/photo-1572177215152-32f247303126?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60"
+                                alt="" class="item-img">
+                            <!-- 相關資訊     -->
+                            <div class="item-content d-flex justify-content-between w-100 p-3">
+                                <div class="item-text font-opensans">
+                                    <p class="h8 text-primary mb-0">Rachada, Bangkok <span class="text-dark-light">・2
+                                            km from
+                                            center</span> </p>
+                                    <p class="item-title font-raleway font-weight-bold text-dark-medium h4 mb-3">
+                                        Rachada
+                                        Hotel</p>
+                                    <p class="font-weight-bold h7 text-dark-light mb-1">Deluxe Double Room</p>
+                                    <p class="h8 text-dark-light mb-3">2 guests・1 bed (Queen size)</p>
+                                    <!-- 條件?設備? -->
+                                    <div>
+                                        <span class="badge badge-primary-light text-dark-light">Free
+                                            cancellation</span>
+                                        <span class="badge badge-primary-light text-dark-light">No prepayment</span>
+                                    </div>
+                                </div>
+                                <div class="item-footer d-flex flex-column justify-content-between">
+                                    <p class="card-text mb-2 d-flex">
+                                        <span class="material-icons">star</span>
+                                        <span class="material-icons">star</span>
+                                        <span class="material-icons">star</span>
+                                        <span class="material-icons mr-1">star</span>
+                                        <span class="h7 text-secondary">4.0</span>
+                                        <span class="h7 text-secondary">(283)</span>
+                                    </p>
+
+                                    <p class=" mb-0 h7 text-secondary d-flex flex-column align-items-end">
+                                        <span class="h8 text-secondary">per night</span>
+                                        TWD 1,980</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="item-divider"></div>
+                    </li>
+                    <li>
+                        <div class="data-item d-flex">
+                            <!-- 圖片 -->
+                            <img src="https://images.unsplash.com/photo-1544097935-e6d136448533?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60"
+                                alt="" class="item-img">
+                            <!-- 相關資訊     -->
+                            <div class="item-content d-flex justify-content-between w-100 p-3">
+                                <div class="item-text font-opensans">
+                                    <p class="h8 text-primary mb-0">Rachada, Bangkok <span class="text-dark-light">・2
+                                            km from
+                                            center</span> </p>
+                                    <p class="item-title font-raleway font-weight-bold text-dark-medium h4 mb-3">
+                                        Rachada
+                                        Hotel</p>
+                                    <p class="font-weight-bold h7 text-dark-light mb-1">Deluxe Double Room</p>
+                                    <p class="h8 text-dark-light mb-3">2 guests・1 bed (Queen size)</p>
+                                    <!-- 條件?設備? -->
+                                    <div>
+                                        <span class="badge badge-primary-light text-dark-light">Free
+                                            cancellation</span>
+                                        <span class="badge badge-primary-light text-dark-light">No prepayment</span>
+                                    </div>
+                                </div>
+                                <div class="item-footer d-flex flex-column justify-content-between">
+                                    <p class="card-text mb-2 d-flex">
+                                        <span class="material-icons">star</span>
+                                        <span class="material-icons">star</span>
+                                        <span class="material-icons">star</span>
+                                        <span class="material-icons mr-1">star</span>
+                                        <span class="h7 text-secondary">4.0</span>
+                                        <span class="h7 text-secondary">(283)</span>
+                                    </p>
+
+                                    <p class=" mb-0 h7 text-secondary d-flex flex-column align-items-end">
+                                        <span class="h8 text-secondary">per night</span>
+                                        TWD 1,980</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="item-divider"></div>
+
+                    </li>
+                    <li>
+                        <div class="data-item d-flex">
+                            <!-- 圖片 -->
+                            <img src="https://images.unsplash.com/photo-1584931999791-83ae17b2a4d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60"
+                                alt="" class="item-img">
+                            <!-- 相關資訊     -->
+                            <div class="item-content d-flex justify-content-between w-100 p-3">
+                                <div class="item-text font-opensans">
+                                    <p class="h8 text-primary mb-0">Rachada, Bangkok <span class="text-dark-light">・2
+                                            km from
+                                            center</span> </p>
+                                    <p class="item-title font-raleway font-weight-bold text-dark-medium h4 mb-3">
+                                        Rachada
+                                        Hotel</p>
+                                    <p class="font-weight-bold h7 text-dark-light mb-1">Deluxe Double Room</p>
+                                    <p class="h8 text-dark-light mb-3">2 guests・1 bed (Queen size)</p>
+                                    <!-- 條件?設備? -->
+                                    <div>
+                                        <span class="badge badge-primary-light text-dark-light">Free
+                                            cancellation</span>
+                                        <span class="badge badge-primary-light text-dark-light">No prepayment</span>
+                                    </div>
+                                </div>
+                                <div class="item-footer d-flex flex-column justify-content-between">
+                                    <p class="card-text mb-2 d-flex">
+                                        <span class="material-icons">star</span>
+                                        <span class="material-icons">star</span>
+                                        <span class="material-icons">star</span>
+                                        <span class="material-icons mr-1">star</span>
+                                        <span class="h7 text-secondary">4.0</span>
+                                        <span class="h7 text-secondary">(283)</span>
+                                    </p>
+
+                                    <p class=" mb-0 h7 text-secondary d-flex flex-column align-items-end">
+                                        <span class="h8 text-secondary">per night</span>
+                                        TWD 1,980</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="item-divider"></div>
+
+                    </li>
+                    <li>
+                        <div class="data-item d-flex">
+                            <!-- 圖片 -->
+                            <img src="https://images.unsplash.com/photo-1560747571-e9b3c7e7868c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60"
+                                alt="" class="item-img">
+                            <!-- 相關資訊     -->
+                            <div class="item-content d-flex justify-content-between w-100 p-3">
+                                <div class="item-text font-opensans">
+                                    <p class="h8 text-primary mb-0">Rachada, Bangkok <span class="text-dark-light">・2
+                                            km from
+                                            center</span> </p>
+                                    <p class="item-title font-raleway font-weight-bold text-dark-medium h4 mb-3">
+                                        Rachada
+                                        Hotel</p>
+                                    <p class="font-weight-bold h7 text-dark-light mb-1">Deluxe Double Room</p>
+                                    <p class="h8 text-dark-light mb-3">2 guests・1 bed (Queen size)</p>
+                                    <!-- 條件?設備? -->
+                                    <div>
+                                        <span class="badge badge-primary-light text-dark-light">Free
+                                            cancellation</span>
+                                        <span class="badge badge-primary-light text-dark-light">No prepayment</span>
+                                    </div>
+                                </div>
+                                <div class="item-footer d-flex flex-column justify-content-between">
+                                    <p class="card-text mb-2 d-flex">
+                                        <span class="material-icons">star</span>
+                                        <span class="material-icons">star</span>
+                                        <span class="material-icons">star</span>
+                                        <span class="material-icons mr-1">star</span>
+                                        <span class="h7 text-secondary">4.0</span>
+                                        <span class="h7 text-secondary">(283)</span>
+                                    </p>
+
+                                    <p class=" mb-0 h7 text-secondary d-flex flex-column align-items-end">
+                                        <span class="h8 text-secondary">per night</span>
+                                        TWD 1,980</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="item-divider"></div>
+
+                    </li>
+                    <li>
+                        <div class="data-item d-flex">
+                            <!-- 圖片 -->
+                            <img src="https://images.unsplash.com/photo-1560747571-e9b3c7e7868c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60"
+                                alt="" class="item-img">
+                            <!-- 相關資訊     -->
+                            <div class="item-content d-flex justify-content-between w-100 p-3">
+                                <div class="item-text font-opensans">
+                                    <p class="h8 text-primary mb-0">Rachada, Bangkok <span class="text-dark-light">・2
+                                            km from
+                                            center</span> </p>
+                                    <p class="item-title font-raleway font-weight-bold text-dark-medium h4 mb-3">
+                                        Rachada
+                                        Hotel</p>
+                                    <p class="font-weight-bold h7 text-dark-light mb-1">Deluxe Double Room</p>
+                                    <p class="h8 text-dark-light mb-3">2 guests・1 bed (Queen size)</p>
+                                    <!-- 條件?設備? -->
+                                    <div>
+                                        <span class="badge badge-primary-light text-dark-light">Free
+                                            cancellation</span>
+                                        <span class="badge badge-primary-light text-dark-light">No
+                                            prepayment</span>
+                                    </div>
+                                </div>
+                                <div class="item-footer d-flex flex-column justify-content-between">
+                                    <p class="card-text mb-2 d-flex">
+                                        <span class="material-icons">star</span>
+                                        <span class="material-icons">star</span>
+                                        <span class="material-icons">star</span>
+                                        <span class="material-icons mr-1">star</span>
+                                        <span class="h7 text-secondary">4.0</span>
+                                        <span class="h7 text-secondary">(283)</span>
+                                    </p>
+
+                                    <p class=" mb-0 h7 text-secondary d-flex flex-column align-items-end">
+                                        <span class="h8 text-secondary">per night</span>
+                                        TWD 1,980</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="item-divider"></div>
+
+                    </li>
+                    <li>
+                        <div class="data-item d-flex">
+                            <!-- 圖片 -->
+                            <img src="https://images.unsplash.com/photo-1560747571-e9b3c7e7868c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60"
+                                alt="" class="item-img">
+                            <!-- 相關資訊     -->
+                            <div class="item-content d-flex justify-content-between w-100 p-3">
+                                <div class="item-text font-opensans">
+                                    <p class="h8 text-primary mb-0">Rachada, Bangkok <span class="text-dark-light">・2
+                                            km from
+                                            center</span> </p>
+                                    <p class="item-title font-raleway font-weight-bold text-dark-medium h4 mb-3">
+                                        Rachada
+                                        Hotel</p>
+                                    <p class="font-weight-bold h7 text-dark-light mb-1">Deluxe Double Room</p>
+                                    <p class="h8 text-dark-light mb-3">2 guests・1 bed (Queen size)</p>
+                                    <!-- 條件?設備? -->
+                                    <div>
+                                        <span class="badge badge-primary-light text-dark-light">Free
+                                            cancellation</span>
+                                        <span class="badge badge-primary-light text-dark-light">No
+                                            prepayment</span>
+                                    </div>
+                                </div>
+                                <div class="item-footer d-flex flex-column justify-content-between">
+                                    <p class="card-text mb-2 d-flex">
+                                        <span class="material-icons">star</span>
+                                        <span class="material-icons">star</span>
+                                        <span class="material-icons">star</span>
+                                        <span class="material-icons mr-1">star</span>
+                                        <span class="h7 text-secondary">4.0</span>
+                                        <span class="h7 text-secondary">(283)</span>
+                                    </p>
+
+                                    <p class=" mb-0 h7 text-secondary d-flex flex-column align-items-end">
+                                        <span class="h8 text-secondary">per night</span>
+                                        TWD 1,980</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="item-divider"></div>
+
+                    </li>
+                    <li>
+                        <div class="data-item d-flex">
+                            <!-- 圖片 -->
+                            <img src="https://images.unsplash.com/photo-1560747571-e9b3c7e7868c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60"
+                                alt="" class="item-img">
+                            <!-- 相關資訊     -->
+                            <div class="item-content d-flex justify-content-between w-100 p-3">
+                                <div class="item-text font-opensans">
+                                    <p class="h8 text-primary mb-0">Rachada, Bangkok <span class="text-dark-light">・2
+                                            km from
+                                            center</span> </p>
+                                    <p class="item-title font-raleway font-weight-bold text-dark-medium h4 mb-3">
+                                        Rachada
+                                        Hotel</p>
+                                    <p class="font-weight-bold h7 text-dark-light mb-1">Deluxe Double Room</p>
+                                    <p class="h8 text-dark-light mb-3">2 guests・1 bed (Queen size)</p>
+                                    <!-- 條件?設備? -->
+                                    <div>
+                                        <span class="badge badge-primary-light text-dark-light">Free
+                                            cancellation</span>
+                                        <span class="badge badge-primary-light text-dark-light">No
+                                            prepayment</span>
+                                    </div>
+                                </div>
+                                <div class="item-footer d-flex flex-column justify-content-between">
+                                    <p class="card-text mb-2 d-flex">
+                                        <span class="material-icons">star</span>
+                                        <span class="material-icons">star</span>
+                                        <span class="material-icons">star</span>
+                                        <span class="material-icons mr-1">star</span>
+                                        <span class="h7 text-secondary">4.0</span>
+                                        <span class="h7 text-secondary">(283)</span>
+                                    </p>
+
+                                    <p class=" mb-0 h7 text-secondary d-flex flex-column align-items-end">
+                                        <span class="h8 text-secondary">per night</span>
+                                        TWD 1,980</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="item-divider"></div>
+
+                    </li>
+                    <li>
+                        <div class="data-item d-flex">
+                            <!-- 圖片 -->
+                            <img src="https://images.unsplash.com/photo-1560747571-e9b3c7e7868c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60"
+                                alt="" class="item-img">
+                            <!-- 相關資訊     -->
+                            <div class="item-content d-flex justify-content-between w-100 p-3">
+                                <div class="item-text font-opensans">
+                                    <p class="h8 text-primary mb-0">Rachada, Bangkok <span class="text-dark-light">・2
+                                            km from
+                                            center</span> </p>
+                                    <p class="item-title font-raleway font-weight-bold text-dark-medium h4 mb-3">
+                                        Rachada
+                                        Hotel</p>
+                                    <p class="font-weight-bold h7 text-dark-light mb-1">Deluxe Double Room</p>
+                                    <p class="h8 text-dark-light mb-3">2 guests・1 bed (Queen size)</p>
+                                    <!-- 條件?設備? -->
+                                    <div>
+                                        <span class="badge badge-primary-light text-dark-light">Free
+                                            cancellation</span>
+                                        <span class="badge badge-primary-light text-dark-light">No
+                                            prepayment</span>
+                                    </div>
+                                </div>
+                                <div class="item-footer d-flex flex-column justify-content-between">
+                                    <p class="card-text mb-2 d-flex">
+                                        <span class="material-icons">star</span>
+                                        <span class="material-icons">star</span>
+                                        <span class="material-icons">star</span>
+                                        <span class="material-icons mr-1">star</span>
+                                        <span class="h7 text-secondary">4.0</span>
+                                        <span class="h7 text-secondary">(283)</span>
+                                    </p>
+
+                                    <p class=" mb-0 h7 text-secondary d-flex flex-column align-items-end">
+                                        <span class="h8 text-secondary">per night</span>
+                                        TWD 1,980</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="item-divider"></div>
+
+                    </li>
+                    <li>
+                        <div class="data-item d-flex">
+                            <!-- 圖片 -->
+                            <img src="https://images.unsplash.com/photo-1560747571-e9b3c7e7868c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60"
+                                alt="" class="item-img">
+                            <!-- 相關資訊     -->
+                            <div class="item-content d-flex justify-content-between w-100 p-3">
+                                <div class="item-text font-opensans">
+                                    <p class="h8 text-primary mb-0">Rachada, Bangkok <span class="text-dark-light">・2
+                                            km from
+                                            center</span> </p>
+                                    <p class="item-title font-raleway font-weight-bold text-dark-medium h4 mb-3">
+                                        Rachada
+                                        Hotel</p>
+                                    <p class="font-weight-bold h7 text-dark-light mb-1">Deluxe Double Room</p>
+                                    <p class="h8 text-dark-light mb-3">2 guests・1 bed (Queen size)</p>
+                                    <!-- 條件?設備? -->
+                                    <div>
+                                        <span class="badge badge-primary-light text-dark-light">Free
+                                            cancellation</span>
+                                        <span class="badge badge-primary-light text-dark-light">No
+                                            prepayment</span>
+                                    </div>
+                                </div>
+                                <div class="item-footer d-flex flex-column justify-content-between">
+                                    <p class="card-text mb-2 d-flex">
+                                        <span class="material-icons">star</span>
+                                        <span class="material-icons">star</span>
+                                        <span class="material-icons">star</span>
+                                        <span class="material-icons mr-1">star</span>
+                                        <span class="h7 text-secondary">4.0</span>
+                                        <span class="h7 text-secondary">(283)</span>
+                                    </p>
+                                    <p class=" mb-0 h7 text-secondary d-flex flex-column align-items-end">
+                                        <span class="h8 text-secondary">per night</span>
+                                        TWD 1,980</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </li>
+                </ul>
+
+                <!-- 頁碼 -->
+                <nav aria-label="Page navigation example" class="bg-primary-light p-3 mb-8 page">
+                    <ul class="pagination justify-content-between mb-0">
+                        <li class="page-item"><a class="btn btn-outline-primary font-weight-bold" href="#">PREVIOUS</a>
+                        </li>
+                        <li class="page-item"><a class="page-link font-weight-bold" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link font-weight-bold" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link font-weight-bold" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link font-weight-bold" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link font-weight-bold" href="#">5</a></li>
+                        <li class="page-item"><a class="page-link font-weight-bold" href="#">6</a></li>
+                        <li class="page-item"><a class="page-link font-weight-bold" href="#">7</a></li>
+                        <li class="page-item"><a class="page-link font-weight-bold" href="#">8</a></li>
+                        <li class="page-item"><a class="page-link font-weight-bold" href="#">9</a></li>
+                        <li class="page-item"><a class="btn btn-primary font-weight-bold" href="#">NEXT</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+
+
+        </div>
+    </div>
+</section>
+
+    <!-- 訂閱subscribe -->
+    <section class="subscribe bg-primary-light py-4">
+        <div class="container">
+            <div class="row align-items-center d-flex flex-md-row flex-column">
+                <div class="col-md-5 col-12">
+                    <p class="h2 font-weight-bold mb-3 mb-md-0">Subscribe for Exclusive Offer</p>
+                </div>
+                <div class="col-md-7 col-12">
+                    <div class="input-group">
+                        <input type="email" class="form-control subscribeInput" placeholder="Your email address"
+                            aria-label="Your email address" aria-describedby="button-addon2">
+                        <div class="input-group-append">
+                            <button class="subscribeBtn btn btn-primary font-weight-bold" type="button"
+                                id="button-addon2">subscribe</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer class="footer py-4 h7 font-opensans">
+        <div class="container">
+            <ul class="list-unstyled d-flex flex-column flex-md-row align-items-center justify-content-md-between mb-0">
+                <li class="order-2 order-md-1 mr-lg-7">© 2020 ALOHA, Inc. All rights reserved.</li>
+                <li class="mr-lg-auto order-1 order-md-2 mb-3 mb-md-0">
+                    <ul class="list-unstyled d-flex">
+                        <li class="pr-4">FAQs</li>
+                        <li class="pr-4">Terms of use</li>
+                        <li>Privacy policy</li>
+                    </ul>
+                </li>
+                <li class="d-none d-md-none d-lg-block order-lg-3 ">
+                    <ul class="list-unstyled d-flex">
+                        <li class="dropdown mr-lg-4">
+                            <a class="dropdownBtn dropdown-toggle text-dark" href="#" role="button"
+                                id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="material-icons mr-2">
+                                    language
+                                </span>
+                                <span class="text-secondary">English</span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="#">繁體中文</a>
+                                <a class="dropdown-item" href="#">English</a>
+                                <a class="dropdown-item" href="#">日本語</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdownBtn  dropdown-toggle text-dark" href="#" role="button"
+                                id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="material-icons">
+                                    attach_money
+                                </span>
+                                <span class="text-secondary mr-2">TWD</span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="#">TWD</a>
+                                <a class="dropdown-item" href="#">USD</a>
+                                <a class="dropdown-item" href="#">JPY</a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>
+</body>
+
+</html>
