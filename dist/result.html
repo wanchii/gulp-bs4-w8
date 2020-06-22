@@ -61,9 +61,10 @@
     <div class="container">
         <div class="row">
             <div class="col-12 ">
-                <div class="searchBar-content list-unstyled font-opensans d-flex flex-lg-row flex-md-column flex-column py-4">
+                <div
+                    class="searchBar-content list-unstyled font-opensans d-flex flex-lg-row flex-md-column flex-column py-4">
                     <!-- 目的地 待做下拉選單-->
-                    <div class="searchBar-item input-group mb-lg-0 mr-lg-3 mb-3">
+                    <!-- <div class="searchBar-item input-group mb-lg-0 mr-lg-3 mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text material-icons">
                                 location_on
@@ -71,43 +72,18 @@
 
                         </div>
                         <input type="text" class="searchBar-input" placeholder="Destination">
-                    </div>
-                    <!-- <div class="searchBar-item mb-lg-0 mr-lg-3 w-30">
-                        <div class="dropdown">
-                            <button class="btn bg-white d-md-flex align-items-md-center py-md-2 w-100" type="button"
-                                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false">
-
-                                <span class="material-icons mr-2">location_on</span>
-
-                                <div class="d-flex flex-column font-opensans text-md-left">
-                                    <span class="font-weight-bold h8 text-dark-medium">Destination</span>
-                                    <span class="h7 text-dark-light">Bangkok, Thailand</span>
-                                </div>
-
-                            </button>
-
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">
-                                    <span class="material-icons">star</span>
-                                    <span>BAn</span>
-                                    <span>th</span>/a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                        </div>
                     </div> -->
                     <!-- 日期 待做選取日曆-->
-                    <div class="searchBar-item input-group mb-lg-0 mr-lg-3 mb-3">
+                    <!-- <div class="searchBar-item input-group mb-lg-0 mr-lg-3 mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text material-icons">
                                 date_range
                             </span>
                         </div>
                         <input type="text" class="searchBar-input" placeholder="Check-in / Check-out">
-                    </div>
+                    </div> -->
                     <!-- 人數 待做下拉選單-->
-                    <div class="searchBar-item input-group mb-lg-0 mr-lg-3 mb-3">
+                    <!-- <div class="searchBar-item input-group mb-lg-0 mr-lg-3 mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text material-icons">
                                 person
@@ -115,38 +91,140 @@
 
                         </div>
                         <input type="text" class="searchBar-input" placeholder="Guests">
-                    </div>
-                    <!-- 人數下拉選單QQ -->
-                    <!-- <div class="searchBar-item mb-lg-0 mr-lg-3">
-                        <div class="dropdown">
-                            <button class="btn bg-white d-md-flex align-items-md-center py-md-2 w-100" type="button"
-                                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false">
-
-                                <span class="material-icons mr-2">person</span>
-
-                                <div class="d-flex flex-column font-opensans text-md-left">
-                                    <span class="font-weight-bold h8 text-dark-medium">Guests</span>
-                                    <span class="h7 text-dark-light">2 adults・1 room</span>
-                                </div>
-
-                            </button>
-
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">
-                                    <span class="material-icons">star</span>
-                                    <span>BAn</span>
-                                    <span>th</span>/a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                        </div>
                     </div> -->
+                    <!-- 目的地 -->
+                    <div class="dropdown searchBar-item mb-lg-0 mr-lg-3 mb-3 w-100">
+                        <button class="btn bg-white text-dark-light d-flex align-items-center btn-dropdown w-100 h-100"
+                            type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <span class="material-icons text-dark mr-3 ">location_on</span>
+                            <div class="d-flex flex-column text-left">
+                                <span class="h8 font-weight-bold text-dark-medium">Destination</span>
+                                <p class="h7 text-dark-light mb-0">Bangkok, Thailand</p>
+                            </div>
+                        </button>
+                        <div class="dropdown-menu destination-menu w-100 mt-2" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item d-flex" href="#">
+                                <span class="material-icons mr-2">star</span>
+                                <p class="d-flex flex-column">
+                                    <span>Bangkok</span>
+                                    <span class="text-dark-light h8">Thailand</span>
+
+                                </p>
+                            </a>
+                            <a class="dropdown-item d-flex" href="#">
+                                <span class="material-icons mr-2">star</span>
+                                <p class="d-flex flex-column">
+                                    <span>Osaka</span>
+                                    <span class="text-dark-light h8">JAPAN</span>
+                                </p>
+                            </a>
+                            <a class="dropdown-item d-flex" href="#">
+                                <span class="material-icons mr-2">star</span>
+                                <p class="d-flex flex-column">
+                                    <span>Roma</span>
+                                    <span class="text-dark-light h8">Italy</span>
+                                </p>
+                            </a>
+                            <a class="dropdown-item d-flex" href="#">
+                                <span class="material-icons mr-2">star</span>
+                                <p class="d-flex flex-column">
+                                    <span>Paris</span>
+                                    <span class="text-dark-light h8">London</span>
+                                </p>
+                            </a>
+                            <a class="dropdown-item d-flex" href="#">
+                                <span class="material-icons mr-2">star</span>
+                                <p class="d-flex flex-column">
+                                    <span>Reykjavík</span>
+                                    <span class="text-dark-light h8">iceland</span>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 日期 下拉選單 待做 -->
+                    <div class="dropdown  searchBar-item mb-lg-0 mr-lg-3 mb-3 w-100">
+                        <button
+                            class="btn bg-white text-secondary d-flex font-4 align-items-center btn-dropdown w-100 h-100"
+                            type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="true">
+                            <span class="material-icons text-dark mr-3"> date_range</span>
+                            Check-in / Check-out
+                        </button>
+                        <div class="dropdown-menu destination-menu w-100 mt-2 " aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
+                    <!-- 人數 -->
+                    <div class="dropdown  searchBar-item mb-lg-0 mr-lg-3 mb-3 w-100">
+                        <button
+                            class="btn bg-white text-secondary d-flex font-4 align-items-center btn-dropdown w-100 h-100"
+                            type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="true">
+                            <span class="material-icons text-dark mr-3 ">person</span>
+                            <div class="d-flex flex-column text-left">
+                                <span class="h8 font-weight-bold text-dark-medium">Guest</span>
+                                <p class="h7 text-dark-light mb-0">2 adults・1 room</p>
+                            </div>
+                        </button>
+                        <div class="dropdown-menu destination-menu w-100 mt-2" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item px-3 d-flex justify-content-between align-items-center" href="#">
+                                <span>Adult</span>
+                                <div class="btn-group btn-group-sm" role="group" aria-label="...">
+                                    <button type="button" class="btn">
+                                        <span class="material-icons">
+                                            remove
+                                        </span>
+                                    </button>
+                                    <input type="text" size="1" value="2" class="text-center border-0 text-dark-light">
+                                    <button type="button" class="btn">
+                                        <span class="material-icons">
+                                            add
+                                        </span>
+                                    </button>
+                                </div>
+                            </a>
+                            <a class="dropdown-item px-3 d-flex justify-content-between align-items-center" href="#">
+                                <span>Child</span>
+                                <div class="btn-group btn-group-sm" role="group" aria-label="...">
+                                    <button type="button" class="btn">
+                                        <span class="material-icons">
+                                            remove
+                                        </span>
+                                    </button>
+                                    <input type="text" size="1" value="0" class="text-center border-0 text-dark-light">
+                                    <button type="button" class="btn">
+                                        <span class="material-icons">
+                                            add
+                                        </span>
+                                    </button>
+                                </div>
+                            </a>
+                            <a class="dropdown-item px-3 d-flex justify-content-between align-items-center" href="#">
+                                <span>Room</span>
+                                <div class="btn-group btn-group-sm" role="group" aria-label="...">
+                                    <button type="button" class="btn">
+                                        <span class="material-icons">
+                                            remove
+                                        </span>
+                                    </button>
+                                    <input type="text" size="1" value="1" class="text-center border-0 text-dark-light">
+                                    <button type="button" class="btn">
+                                        <span class="material-icons">
+                                            add
+                                        </span>
+                                    </button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
 
                     <button type="button" class="searchBar-btn btn btn-primary font-weight-bold">SEARCH</button>
-            
+
                 </div>
-            </div>    
+            </div>
         </div>
     </div>
     </div>

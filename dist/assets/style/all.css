@@ -12480,6 +12480,10 @@ sub {
   padding: 0;
 }
 
+.resultSearch .searchBar-item .btn-dropdown {
+  padding: .5rem 1rem;
+}
+
 .result .page {
   border-radius: 8px;
 }
