@@ -102,37 +102,129 @@
             <div class="col-md-10 col-12 ">
                 <div class="searchBar-content searchBar-position bg-primary-light font-opensans d-flex flex-lg-row flex-md-column
                     flex-column p-4">
-                    <!-- 目的地 待做下拉選單-->
-                    <div class="searchBar-item input-group mb-lg-0 mr-lg-3 mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text material-icons">
-                                location_on
-                            </span>
+                    <!-- 目的地 -->
+                    <div class="dropdown searchBar-item mb-lg-0 mr-lg-3 mb-3 w-100">
+                        <button class="btn bg-white text-dark-light d-flex align-items-center btn-dropdown w-100 h-100"
+                            type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <span class="material-icons text-dark mr-3 ">location_on</span>
+                            Destination
+                        </button>
+                        <div class="dropdown-menu destination-menu w-100 mt-2" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item d-flex" href="#">
+                                <span class="material-icons mr-2">star</span>
+                                <p class="d-flex flex-column">
+                                    <span>Bangkok</span>
+                                    <span class="text-dark-light h8">Thailand</span>
 
+                                </p>
+                            </a>
+                            <a class="dropdown-item d-flex" href="#">
+                                <span class="material-icons mr-2">star</span>
+                                <p class="d-flex flex-column">
+                                    <span>Osaka</span>
+                                    <span class="text-dark-light h8">JAPAN</span>
+                                </p>
+                            </a>
+                            <a class="dropdown-item d-flex" href="#">
+                                <span class="material-icons mr-2">star</span>
+                                <p class="d-flex flex-column">
+                                    <span>Roma</span>
+                                    <span class="text-dark-light h8">Italy</span>
+                                </p>
+                            </a>
+                            <a class="dropdown-item d-flex" href="#">
+                                <span class="material-icons mr-2">star</span>
+                                <p class="d-flex flex-column">
+                                    <span>Paris</span>
+                                    <span class="text-dark-light h8">London</span>
+                                </p>
+                            </a>
+                            <a class="dropdown-item d-flex" href="#">
+                                <span class="material-icons mr-2">star</span>
+                                <p class="d-flex flex-column">
+                                    <span>Reykjavík</span>
+                                    <span class="text-dark-light h8">iceland</span>
+                                </p>
+                            </a>
                         </div>
-                        <input type="text" class="searchBar-input" placeholder="Destination">
                     </div>
-                    <!-- 日期 待做選取日曆-->
-                    <div class="searchBar-item input-group mb-lg-0 mr-lg-3 mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text material-icons">
-                                date_range
-                            </span>
+                    <!-- 日期 下拉選單 待做 -->
+                    <div class="dropdown  searchBar-item mb-lg-0 mr-lg-3 mb-3 w-100">
+                        <button
+                            class="btn bg-white text-secondary d-flex font-4 align-items-center btn-dropdown w-100 h-100"
+                            type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="true">
+                            <span class="material-icons text-dark mr-3"> date_range</span>
+                            Check-in / Check-out
+                        </button>
+                        <div class="dropdown-menu destination-menu mt-2 " aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
                         </div>
-                        <input type="text" class="searchBar-input" placeholder="Check-in / Check-out">
                     </div>
-                    <!-- 人數 待做下拉選單-->
-                    <div class="searchBar-item input-group mb-lg-0 mr-lg-3 mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text material-icons">
-                                person
-                            </span>
-
+                    <!-- 人數 -->
+                    <div class="dropdown  searchBar-item mb-lg-0 mr-lg-3 mb-3 w-100">
+                        <button
+                            class="btn bg-white text-secondary d-flex font-4 align-items-center btn-dropdown w-100 h-100"
+                            type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="true">
+                            <span class="material-icons text-dark mr-3 ">person</span>
+                            Guests
+                        </button>
+                        <div class="dropdown-menu destination-menu w-100 mt-2" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item px-3 d-flex justify-content-between align-items-center" href="#">
+                                <span>Adult</span>
+                                <div class="btn-group btn-group-sm" role="group" aria-label="...">
+                                    <button type="button" class="btn">
+                                        <span class="material-icons">
+                                            remove
+                                        </span>
+                                    </button>
+                                    <input type="text" size="1" value="2" class="text-center border-0 text-dark-light">
+                                    <button type="button" class="btn">
+                                        <span class="material-icons">
+                                            add
+                                        </span>
+                                    </button>
+                                </div>
+                            </a>
+                            <a class="dropdown-item px-3 d-flex justify-content-between align-items-center" href="#">
+                                <span>Child</span>
+                                <div class="btn-group btn-group-sm" role="group" aria-label="...">
+                                    <button type="button" class="btn">
+                                        <span class="material-icons">
+                                            remove
+                                        </span>
+                                    </button>
+                                    <input type="text" size="1" value="0" class="text-center border-0 text-dark-light">
+                                    <button type="button" class="btn">
+                                        <span class="material-icons">
+                                            add
+                                        </span>
+                                    </button>
+                                </div>
+                            </a>
+                            <a class="dropdown-item px-3 d-flex justify-content-between align-items-center" href="#">
+                                <span>Room</span>
+                                <div class="btn-group btn-group-sm" role="group" aria-label="...">
+                                    <button type="button" class="btn">
+                                        <span class="material-icons">
+                                            remove
+                                        </span>
+                                    </button>
+                                    <input type="text" size="1" value="1" class="text-center border-0 text-dark-light">
+                                    <button type="button" class="btn">
+                                        <span class="material-icons">
+                                            add
+                                        </span>
+                                    </button>
+                                </div>
+                            </a>
                         </div>
-                        <input type="text" class="searchBar-input" placeholder="Guests">
                     </div>
-                    <!-- searchBar-btn 待放連結 連至搜尋頁面-->
-
+                    <!-- searchBar-btn 連至result搜尋頁面-->
                     <a href="result.html" class="searchBar-btn btn btn-primary font-weight-bold">SEARCH</a>
                 </div>
 
@@ -141,7 +233,7 @@
     </div>
 </section>
 
-<!-- 首選  swiper的按鈕位置-->
+<!-- top首選  swiper的按鈕位置-->
 <section class=" top mb-8">
     <div class="container">
         <div class="row mb-4">
@@ -410,9 +502,10 @@
                 <div class="card border-0">
                     <img src="https://images.unsplash.com/photo-1509024644558-2f56ce76c490?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60"
                         class="card-img-top rounded" alt="...">
-                    <div class="card-body">
+                    <div class="card-body text-dark-medium">
                         <h5 class="mb-2 font-weight-bold">The fifth most visited country</h5>
-                        <p class="card-text">Italy is the fifth most visited country in the world, with a total of 52.3
+                        <p class="card-text text-dark-light">Italy is the fifth most visited country in the world, with
+                            a total of 52.3
                             million…</p>
                     </div>
                 </div>
@@ -421,9 +514,10 @@
                 <div class="card border-0">
                     <img src="https://images.unsplash.com/photo-1558225818-388ab5bcd45d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60"
                         class="card-img-top rounded" alt="...">
-                    <div class="card-body">
+                    <div class="card-body text-dark-medium">
                         <h5 class="mb-2 font-weight-bold">Visit Thailand for Bangkok</h5>
-                        <p class="card-text">Asian tourists primarily visit Thailand for Bangkok and the historical,
+                        <p class="card-text text-dark-light">Asian tourists primarily visit Thailand for Bangkok and the
+                            historical,
                             natural, and…</p>
                     </div>
                 </div>
@@ -432,9 +526,10 @@
                 <div class="card border-0">
                     <img src="https://images.unsplash.com/photo-1519872436884-4a50eb5a62db?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60"
                         class="card-img-top rounded" alt="...">
-                    <div class="card-body">
+                    <div class="card-body text-dark-medium">
                         <h5 class="mb-2 font-weight-bold">Lord of the Rings Tour</h5>
-                        <p class="card-text">The national cuisine has been described as Pacific Rim, incorporating the
+                        <p class="card-text text-dark-light">The national cuisine has been described as Pacific Rim,
+                            incorporating the
                             native Māori…</p>
                     </div>
                 </div>
@@ -448,13 +543,13 @@
     <div class="container">
       <div class="row justify-content-center">
 
-        <p class="subscribeTitle mb-md-4">Subscribe for Exclusive Offer</p>
+        <p class="subscribeTitle text-dark-medium mb-md-4">Subscribe for Exclusive Offer</p>
 
       </div>
       <div class="row justify-content-center">
         <div class="col-lg-6 col-md-10 col-12">
           <div class="input-group">
-            <input type="email" class="form-control subscribeInput" placeholder="Your email address"
+            <input type="email" class="form-control subscribeInput text-dark-light" placeholder="Your email address"
               aria-label="Your email address" aria-describedby="button-addon2">
             <div class="input-group-append">
               <button class="subscribeBtn btn btn-primary font-weight-bold" type="button"
@@ -466,7 +561,7 @@
     </div>
   </section>
   <!-- footer -->
-  <footer class="footer py-4 h7 font-opensans">
+  <footer class="footer py-4 h7 font-opensans text-dark-light">
     <div class="container">
       <ul class="list-unstyled d-flex flex-column flex-md-row align-items-center justify-content-md-between mb-0">
         <li class="order-2 order-md-1 mr-lg-7">© 2020 ALOHA, Inc. All rights reserved.</li>

@@ -12248,7 +12248,6 @@ sub {
 
 .footer {
   line-height: 19px;
-  color: rgba(0, 0, 0, 0.6);
 }
 
 .footer .dropdownBtn {
@@ -12275,7 +12274,6 @@ sub {
 }
 
 .subscribe .subscribeTitle {
-  color: rgba(0, 0, 0, 0.87);
   font-size: 24px;
   line-height: 29px;
   font-weight: bold;
@@ -12293,7 +12291,6 @@ sub {
   height: auto;
   padding: 16px 21px;
   line-height: 1.5;
-  color: rgba(0, 0, 0, 0.6);
   border: 0;
   border-radius: 4px 0px 0px 4px;
 }
@@ -12385,6 +12382,15 @@ sub {
   padding: 17px 32px;
 }
 
+.searchBar-item .btn-dropdown {
+  padding: 1rem 1rem;
+}
+
+.searchBar-item .dropdown-item:hover,
+.searchBar-item .dropdown-item:focus {
+  background-color: #F1F0F8;
+}
+
 .top a {
   color: rgba(0, 0, 0, 0.6);
 }
@@ -12472,11 +12478,6 @@ sub {
 
 .ins .card-body {
   padding: 0;
-  color: rgba(0, 0, 0, 0.87);
-}
-
-.ins .card-text {
-  color: rgba(0, 0, 0, 0.6);
 }
 
 .result .page {
